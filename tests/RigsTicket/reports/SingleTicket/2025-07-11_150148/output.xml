@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.2 on win32)" generated="2025-07-11T15:18:35.052203" rpa="false" schemaversion="5">
+<suite id="s1" name="SingleTicket" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\RigsTicket\SingleTicket.robot">
+<test id="s1-t1" name="Rigs Single Ticket" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:18:35.563473" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-11T15:18:35.563055" elapsed="113.042583"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-11T15:20:28.606314" elapsed="0.000825"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-11T15:20:28.607563" elapsed="1.048899"/>
+</kw>
+<kw name="Login To Application">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:20:29.659404" level="INFO">Typing text 'admin@steadyoil.com' into text field 'name:identity'.</msg>
+<arg>name:identity</arg>
+<arg>admin@steadyoil.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:20:29.658470" elapsed="3.236108"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:20:32.895548" level="INFO">Typing text 'Pwd4so!l' into text field 'name:password'.</msg>
+<arg>name:password</arg>
+<arg>Pwd4so!l</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:20:32.895044" elapsed="3.187538"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:20:36.083621" level="INFO">Clicking button 'xpath:/html/body/div/div/div/form/div[4]/button'.</msg>
+<arg>xpath:/html/body/div/div/div/form/div[4]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:20:36.083085" elapsed="21.091046"/>
+</kw>
+<status status="PASS" start="2025-07-11T15:20:29.657429" elapsed="27.517117"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:21:04.490280" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-11T15:21:04.490686" level="FAIL">Text 'Dashboard' did not appear in 5 seconds.</msg>
+<arg>Dashboard</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-07-11T15:20:57.174888" elapsed="7.320039">Text 'Dashboard' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<arg>//nav[@id="main-sidebar"]//section//ul//li[6]//a//i//span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.495263" elapsed="0.000067"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//nav[@id="main-sidebar"]//section//ul//li[6]//ul//li[5]//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.495512" elapsed="0.000046"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id:select2-wells_client_name-container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.495725" elapsed="0.000040"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>class:select2-search__field</arg>
+<arg>Lund Brady</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.495908" elapsed="0.000042"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//span[@class="select2-results"]//ul//li[contains(text(), "Lund Brady")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.496092" elapsed="0.000036"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:rig_name</arg>
+<arg>N</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.496252" elapsed="0.000036"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id:NABORS b20</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.496425" elapsed="0.000041"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:site_name</arg>
+<arg>North-ND</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.496593" elapsed="0.000037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:purchase_order</arg>
+<arg>ABC_123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.496757" elapsed="0.000042"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:caller_info</arg>
+<arg>Roman Renzo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.496928" elapsed="0.000035"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:wells_ticket_notes</arg>
+<arg>100 gallons required</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.497090" elapsed="0.000037"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:well_add_list</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.497259" elapsed="0.000039"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id:fuel_types</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.497430" elapsed="0.000037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:gallons</arg>
+<arg>100</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.497611" elapsed="0.000046"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>id:rigs_fuel</arg>
+<arg>Motor Fuel</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.497790" elapsed="0.000037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:retail_cost_gallon_wells</arg>
+<arg>2.54455</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.497957" elapsed="0.000037"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id:discount</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.498125" elapsed="0.000037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:fees_wells</arg>
+<arg>15</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.498294" elapsed="0.000037"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id:select2-fuel_class_terminal_wells-container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.498470" elapsed="0.000039"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//ul[@class="select2-results__options"]//li[2]//li[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.498846" elapsed="0.000099"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id:well_add_list</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.499427" elapsed="0.000060"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>class:box-body</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.499653" elapsed="0.000045"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.499855" elapsed="0.000046"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id:wells_ticket_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:04.500043" elapsed="0.000039"/>
+</kw>
+<status status="FAIL" start="2025-07-11T15:18:35.561803" elapsed="148.938749">Text 'Dashboard' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" start="2025-07-11T15:18:35.054720" elapsed="149.446734"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SingleTicket" id="s1" pass="0" fail="1" skip="0">SingleTicket</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

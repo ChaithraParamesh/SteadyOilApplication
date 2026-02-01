@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-12-23T18:25:18.323597" rpa="false" schemaversion="5">
+<suite id="s1" name="Login LogoutTests" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\Login_LogoutModule\Login_LogoutTests.robot">
+<test id="s1-t1" name="TC1 Verify Successful Login" line="11">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:19.446542" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T18:25:19.446044" elapsed="5.350823"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:24.805767" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:24.806528" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-12-23T18:25:24.798889" elapsed="0.226666">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:25.025820" elapsed="0.000057"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:25.025997" elapsed="0.000028"/>
+</kw>
+<status status="FAIL" start="2025-12-23T18:25:19.441936" elapsed="5.584256">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T18:25:25.026496" elapsed="2.078373"/>
+</kw>
+<doc>Verify login with valid credentials.</doc>
+<tag>login</tag>
+<tag>positive</tag>
+<status status="FAIL" start="2025-12-23T18:25:19.440746" elapsed="7.664385">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</test>
+<test id="s1-t2" name="TC2 Verify User Can Logout Successfully" line="19">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:27.107770" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T18:25:27.107374" elapsed="3.030310"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:30.146156" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:30.147078" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-12-23T18:25:30.138264" elapsed="0.011176">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:30.149665" elapsed="0.000050"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:30.149826" elapsed="0.000028"/>
+</kw>
+<status status="FAIL" start="2025-12-23T18:25:27.106769" elapsed="3.043225">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T18:25:30.150465" elapsed="2.188881"/>
+</kw>
+<doc>Verify logout after successful login.</doc>
+<tag>logout</tag>
+<tag>positive</tag>
+<status status="FAIL" start="2025-12-23T18:25:27.105959" elapsed="5.233825">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</test>
+<test id="s1-t3" name="TC3 Verify Login With Empty Username" line="28">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:32.343496" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T18:25:32.343030" elapsed="2.656838"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:35.006802" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:35.007623" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-12-23T18:25:35.000454" elapsed="0.010618">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:35.011422" elapsed="0.000053"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:35.011606" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2025-12-23T18:25:32.342211" elapsed="2.669593">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T18:25:35.012112" elapsed="2.158568"/>
+</kw>
+<doc>Verify error when username field is empty.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-12-23T18:25:32.341054" elapsed="4.830029">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</test>
+<test id="s1-t4" name="TC4 Verify Login With Empty Password" line="38">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:37.175530" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T18:25:37.174983" elapsed="2.616687"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:39.798576" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:39.799139" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-12-23T18:25:39.792061" elapsed="0.009417">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:39.802100" elapsed="0.000104"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:39.802394" elapsed="0.000243"/>
+</kw>
+<status status="FAIL" start="2025-12-23T18:25:37.173725" elapsed="2.629162">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T18:25:39.803365" elapsed="2.175787"/>
+</kw>
+<doc>Verify error when password is empty.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-12-23T18:25:37.172347" elapsed="4.807042">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</test>
+<test id="s1-t5" name="TC5 Verify Login With Empty Username And Password" line="48">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:41.982337" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T18:25:41.981892" elapsed="2.704100"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:44.692821" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:44.693718" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-12-23T18:25:44.686769" elapsed="0.009512">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:44.696867" elapsed="0.000207"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:44.697448" elapsed="0.000082"/>
+</kw>
+<status status="FAIL" start="2025-12-23T18:25:41.981185" elapsed="2.716752">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T18:25:44.698641" elapsed="2.167177"/>
+</kw>
+<doc>Verify error when both username and password are empty.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-12-23T18:25:41.980146" elapsed="4.885957">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</test>
+<test id="s1-t6" name="TC6 Verify Login With Invalid Username" line="59">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:46.869158" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T18:25:46.868700" elapsed="2.719300"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:49.594483" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:49.595319" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-12-23T18:25:49.588370" elapsed="0.011142">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:49.600319" elapsed="0.000141"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:49.600795" elapsed="0.000081"/>
+</kw>
+<status status="FAIL" start="2025-12-23T18:25:46.867909" elapsed="2.733282">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T18:25:49.601841" elapsed="2.187866"/>
+</kw>
+<doc>Verify error when login is attempted with invalid username.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-12-23T18:25:46.866918" elapsed="4.923034">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</test>
+<test id="s1-t7" name="TC7 Verify Login With Invalid Password" line="69">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:51.792454" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T18:25:51.792067" elapsed="2.549966"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2025-12-23T18:25:54.345782" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:54.346124" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2025-12-23T18:25:54.342324" elapsed="0.005856">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:54.348486" elapsed="0.000064"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-12-23T18:25:54.348719" elapsed="0.000040"/>
+</kw>
+<status status="FAIL" start="2025-12-23T18:25:51.791462" elapsed="2.557478">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T18:25:54.349263" elapsed="2.169850"/>
+</kw>
+<doc>Verify error when login is attempted with invalid password.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-12-23T18:25:51.790637" elapsed="4.728689">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</status>
+</test>
+<status status="FAIL" start="2025-12-23T18:25:18.326945" elapsed="38.193158"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">logout</stat>
+<stat pass="0" fail="5" skip="0">negative</stat>
+<stat pass="0" fail="2" skip="0">positive</stat>
+<stat pass="0" fail="5" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Login LogoutTests" id="s1" pass="0" fail="7" skip="0">Login LogoutTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-23T18:25:24.805767" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:30.146156" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:35.006802" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:39.798576" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:44.692821" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:49.594483" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+<msg time="2025-12-23T18:25:54.345782" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=143.0.7499.41)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7266288e5
+	0x7ff726628940
+	0x7ff72640165d
+	0x7ff7263d91b1
+	0x7ff7264897e6
+	0x7ff7264aa5c2
+	0x7ff72644ac29
+	0x7ff72644ba93
+	0x7ff726940640
+	0x7ff72693af80
+	0x7ff7269596e6
+	0x7ff726645de4
+	0x7ff72664ed8c
+	0x7ff726632004
+	0x7ff7266321b5
+	0x7ff726617ee2
+	0x7ffdcf28e8d7
+	0x7ffdd056c53c
+</msg>
+</errors>
+</robot>

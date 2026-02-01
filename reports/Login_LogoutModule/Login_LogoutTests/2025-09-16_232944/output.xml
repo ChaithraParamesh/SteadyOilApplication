@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-09-16T23:29:44.729783" rpa="false" schemaversion="5">
+<suite id="s1" name="Login LogoutTests" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\Login_LogoutModule\Login_LogoutTests.robot">
+<test id="s1-t1" name="TC1 Verify Successful Login" line="11">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:29:45.112548" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-16T23:29:45.112297" elapsed="5.725542"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-16T23:29:50.838157" elapsed="0.037008"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-16T23:29:50.875518" elapsed="0.000495"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-09-16T23:29:50.876204" elapsed="0.501799"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:29:45.111560" elapsed="6.266683"/>
+</kw>
+<kw name="Login To Application" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:29:51.379235" elapsed="1.043282"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:29:52.423157" level="INFO">Typing text 'admin@steadyoil.com' into text field 'id=identity'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:29:52.422790" elapsed="1.730821"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:29:54.154277" level="INFO">Typing text 'Pwd4so!l' into text field 'id=userpass'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:29:54.153876" elapsed="1.630783"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:29:55.785254" level="INFO">Clicking button 'xpath=//button[normalize-space(text())="Login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:29:55.785019" elapsed="9.654032"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-16T23:30:05.439399" elapsed="0.525869"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:29:51.378642" elapsed="14.586855"/>
+</kw>
+<kw name="Login Success Message Validation" owner="Login_LogoutKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Logged In Successfully</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-16T23:30:05.966157" elapsed="0.519382"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Login success message verified</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:30:06.485830" elapsed="0.000397"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:30:05.965779" elapsed="0.520690"/>
+</kw>
+<kw name="Title Validation" owner="Login_LogoutKeywords">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:06.999252" level="INFO">${title} = FuelLogix | FuelLogix Delivery System</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2025-09-16T23:30:06.487113" elapsed="0.512229"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>${TITLE}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-16T23:30:06.999619" elapsed="0.000546"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>The Page title is:${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:30:07.000402" elapsed="0.000468"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-16T23:30:07.001336" level="INFO">FuelLogix | FuelLogix Delivery System</msg>
+<arg>${title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-16T23:30:07.001153" elapsed="0.000256"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:30:06.486734" elapsed="0.514783"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:08.025769" level="INFO">Current page contains text 'Dashboard'.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-16T23:30:07.001671" elapsed="1.024308"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-16T23:30:08.026451" elapsed="2.624915"/>
+</kw>
+<doc>Verify login with valid credentials.</doc>
+<tag>login</tag>
+<tag>positive</tag>
+<status status="PASS" start="2025-09-16T23:29:45.110794" elapsed="25.540753"/>
+</test>
+<test id="s1-t2" name="TC2 Verify User Can Logout Successfully" line="19">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:10.653824" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-16T23:30:10.653451" elapsed="5.936555"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-16T23:30:16.590365" elapsed="0.558932"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-16T23:30:17.149761" elapsed="0.000369"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-09-16T23:30:17.150317" elapsed="0.502138"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:30:10.652847" elapsed="6.999779"/>
+</kw>
+<kw name="Login To Application" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:30:17.653185" elapsed="1.023778"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:18.677375" level="INFO">Typing text 'admin@steadyoil.com' into text field 'id=identity'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:30:18.677143" elapsed="1.720057"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:20.398006" level="INFO">Typing text 'Pwd4so!l' into text field 'id=userpass'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:30:20.397541" elapsed="1.596753"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:21.995322" level="INFO">Clicking button 'xpath=//button[normalize-space(text())="Login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:30:21.994910" elapsed="16.244203"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-16T23:30:38.239408" elapsed="0.541278"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:30:17.652843" elapsed="21.128067"/>
+</kw>
+<kw name="Logout From Application" owner="Login_LogoutKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:38.782018" level="INFO">Clicking element 'xpath=//a[contains(@class,"btn-success") and contains(text(),"Sign out")]'.</msg>
+<arg>xpath=//a[contains(@class,"btn-success") and contains(text(),"Sign out")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:30:38.781668" elapsed="2.365460"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="infoMessage"]/p</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:30:41.147406" elapsed="1.038957"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:43.217997" level="INFO">${logout_msg} = Logged Out Successfully</msg>
+<var>${logout_msg}</var>
+<arg>xpath=//div[@id="infoMessage"]/p</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:30:42.186667" elapsed="1.031415"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${logout_msg}</arg>
+<arg>Logged Out Successfully</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-16T23:30:43.218339" elapsed="0.000325"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>The Logout message is: ${logout_msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:30:43.218835" elapsed="0.000273"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-16T23:30:43.219419" level="INFO">Logged Out Successfully</msg>
+<arg>${logout_msg}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-16T23:30:43.219259" elapsed="0.000228"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:30:38.781233" elapsed="4.438346"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-16T23:30:43.219824" elapsed="2.647244"/>
+</kw>
+<doc>Verify logout after successful login.</doc>
+<tag>logout</tag>
+<tag>positive</tag>
+<status status="PASS" start="2025-09-16T23:30:10.652108" elapsed="35.215095"/>
+</test>
+<test id="s1-t3" name="TC3 Verify Login With Empty Username" line="28">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:30:45.868824" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-16T23:30:45.868553" elapsed="45.086504"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-16T23:31:30.955490" elapsed="0.567011"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-16T23:31:31.522851" elapsed="0.000412"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-09-16T23:31:31.523512" elapsed="0.502051"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:30:45.868123" elapsed="46.157679"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:31:32.027195" level="INFO">Typing text '' into text field 'id=identity'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:31:32.026081" elapsed="1.705429"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:31:33.732660" level="INFO">Typing text 'Pwd4so!l' into text field 'id=userpass'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:31:33.732067" elapsed="1.778972"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:31:35.511531" level="INFO">Clicking button 'xpath=//button[normalize-space(text())="Login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:31:35.511278" elapsed="2.678875"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Validate Username Error" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(),"Email/Username") or contains(text(),"Username")]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:31:38.191040" elapsed="13.396637"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:31:52.626588" level="INFO">${error_text} = The Email/Username field is required.</msg>
+<var>${error_text}</var>
+<arg>xpath=//p[contains(text(),"Email/Username") or contains(text(),"Username")]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:31:51.588225" elapsed="1.038450"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[INFO] Username error displayed: ${error_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:31:52.626954" elapsed="0.000377"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-16T23:31:52.627750" level="INFO">The Email/Username field is required.</msg>
+<arg>${error_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-16T23:31:52.627532" elapsed="0.000302"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${USERNAME_ERROR}</arg>
+<arg>msg=Expected '${USERNAME_ERROR}' but got: ${error_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-16T23:31:52.628011" elapsed="0.000533"/>
+</kw>
+<doc>Validate error when username field is empty.</doc>
+<status status="PASS" start="2025-09-16T23:31:38.190738" elapsed="14.437956"/>
+</kw>
+<arg>Validate Username Error</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-09-16T23:31:38.190428" elapsed="14.438373"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[PASS] Username error validation displayed.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:31:52.628976" elapsed="0.000315"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-09-16T23:31:52.629818" level="FAIL">Negative test executed successfully, marking as FAIL intentionally</msg>
+<arg>Negative test executed successfully, marking as FAIL intentionally</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-09-16T23:31:52.629488" elapsed="0.000545">Negative test executed successfully, marking as FAIL intentionally</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-16T23:31:52.630645" elapsed="2.581266"/>
+</kw>
+<doc>Verify error when username field is empty.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-09-16T23:30:45.867599" elapsed="69.344640">Negative test executed successfully, marking as FAIL intentionally</status>
+</test>
+<test id="s1-t4" name="TC4 Verify Login With Empty Password" line="38">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:31:55.214883" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-16T23:31:55.214431" elapsed="23.564478"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-16T23:32:18.779383" elapsed="0.556923"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-16T23:32:19.336718" elapsed="0.000573"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-09-16T23:32:19.337609" elapsed="0.503399"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:31:55.213624" elapsed="24.627654"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:19.842216" level="INFO">Typing text 'admin@steadyoil.com' into text field 'id=identity'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:19.841636" elapsed="1.677512"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:21.520221" level="INFO">Typing text '' into text field 'id=userpass'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:21.519422" elapsed="1.608715"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:23.128870" level="INFO">Clicking button 'xpath=//button[normalize-space(text())="Login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:23.128508" elapsed="3.132438"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Validate Password Error" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(),"Password")]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:32:26.261887" elapsed="1.031738"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:28.325994" level="INFO">${error_text} = The Password field is required.</msg>
+<var>${error_text}</var>
+<arg>xpath=//p[contains(text(),"Password")]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:27.294088" elapsed="1.032019"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Password error displayed: ${error_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:32:28.326448" elapsed="0.000482"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${PASSWORD_ERROR}</arg>
+<arg>msg=Expected '${PASSWORD_ERROR}' but got: ${error_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-16T23:32:28.327255" elapsed="0.000841"/>
+</kw>
+<doc>Validate error when password field is empty.</doc>
+<status status="PASS" start="2025-09-16T23:32:26.261556" elapsed="2.066761"/>
+</kw>
+<arg>Validate Password Error</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-09-16T23:32:26.261220" elapsed="2.067255"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[PASS] Password error validation displayed.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:32:28.328741" elapsed="0.000478"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-09-16T23:32:28.329705" level="FAIL">Negative test executed successfully, marking as FAIL intentionally</msg>
+<arg>Negative test executed successfully, marking as FAIL intentionally</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-09-16T23:32:28.329409" elapsed="0.000444">Negative test executed successfully, marking as FAIL intentionally</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-16T23:32:28.330247" elapsed="2.811351"/>
+</kw>
+<doc>Verify error when password is empty.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-09-16T23:31:55.212825" elapsed="35.928880">Negative test executed successfully, marking as FAIL intentionally</status>
+</test>
+<test id="s1-t5" name="TC5 Verify Login With Empty Username And Password" line="48">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:31.142773" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-16T23:32:31.142604" elapsed="3.265440"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-16T23:32:34.408381" elapsed="0.540986"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-16T23:32:34.949743" elapsed="0.000398"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-09-16T23:32:34.950343" elapsed="0.502154"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:32:31.142322" elapsed="4.310358"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:35.453682" level="INFO">Typing text '' into text field 'id=identity'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:35.452879" elapsed="1.638863"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:37.093495" level="INFO">Typing text '' into text field 'id=userpass'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:37.092070" elapsed="1.638887"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:38.731827" level="INFO">Clicking button 'xpath=//button[normalize-space(text())="Login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:38.731340" elapsed="3.328926"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Validate Username Error" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(),"Email/Username") or contains(text(),"Username")]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:32:42.061788" elapsed="1.030542"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:44.120320" level="INFO">${error_text} = The Email/Username field is required.</msg>
+<var>${error_text}</var>
+<arg>xpath=//p[contains(text(),"Email/Username") or contains(text(),"Username")]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:43.092621" elapsed="1.027776"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[INFO] Username error displayed: ${error_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:32:44.120643" elapsed="0.000397"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-16T23:32:44.121426" level="INFO">The Email/Username field is required.</msg>
+<arg>${error_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-16T23:32:44.121227" elapsed="0.000499"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${USERNAME_ERROR}</arg>
+<arg>msg=Expected '${USERNAME_ERROR}' but got: ${error_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-16T23:32:44.122129" elapsed="0.000418"/>
+</kw>
+<doc>Validate error when username field is empty.</doc>
+<status status="PASS" start="2025-09-16T23:32:42.061300" elapsed="2.061527"/>
+</kw>
+<arg>Validate Username Error</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-09-16T23:32:42.060815" elapsed="2.062105"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Validate Password Error" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(),"Password")]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:32:44.123833" elapsed="1.021370"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:46.168768" level="INFO">${error_text} = The Password field is required.</msg>
+<var>${error_text}</var>
+<arg>xpath=//p[contains(text(),"Password")]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:45.145554" elapsed="1.023296"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Password error displayed: ${error_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:32:46.169093" elapsed="0.000326"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${PASSWORD_ERROR}</arg>
+<arg>msg=Expected '${PASSWORD_ERROR}' but got: ${error_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-16T23:32:46.169596" elapsed="0.000457"/>
+</kw>
+<doc>Validate error when password field is empty.</doc>
+<status status="PASS" start="2025-09-16T23:32:44.123467" elapsed="2.046740"/>
+</kw>
+<arg>Validate Password Error</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-09-16T23:32:44.123092" elapsed="2.047290"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[PASS] Both username and password error validations displayed.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:32:46.170655" elapsed="0.000322"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-09-16T23:32:46.171454" level="FAIL">Negative test executed successfully, marking as FAIL intentionally</msg>
+<arg>Negative test executed successfully, marking as FAIL intentionally</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-09-16T23:32:46.171176" elapsed="0.000408">Negative test executed successfully, marking as FAIL intentionally</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-16T23:32:46.171932" elapsed="2.569442"/>
+</kw>
+<doc>Verify error when both username and password are empty.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-09-16T23:32:31.141959" elapsed="17.599584">Negative test executed successfully, marking as FAIL intentionally</status>
+</test>
+<test id="s1-t6" name="TC6 Verify Login With Invalid Username" line="59">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:48.743892" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-16T23:32:48.743501" elapsed="4.262360"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-16T23:32:53.006057" elapsed="0.527292"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-16T23:32:53.533676" elapsed="0.000375"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-09-16T23:32:53.534242" elapsed="0.502493"/>
+</kw>
+<status status="PASS" start="2025-09-16T23:32:48.742898" elapsed="5.294023"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:54.037446" level="INFO">Typing text 'invalid@user.com' into text field 'id=identity'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>invalid@user.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:54.037126" elapsed="1.669402"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:55.707695" level="INFO">Typing text 'Pwd4so!l' into text field 'id=userpass'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:55.706965" elapsed="1.620574"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:32:57.328175" level="INFO">Clicking button 'xpath=//button[normalize-space(text())="Login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:32:57.327833" elapsed="3.602652"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Validate Invalid Credentials Error" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(),"Incorrect Login")]</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-16T23:33:00.931753" elapsed="1.035040"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:33:02.989930" level="INFO">${error_text} = Incorrect Login</msg>
+<var>${error_text}</var>
+<arg>xpath=//p[contains(text(),"Incorrect Login")]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-16T23:33:01.967139" elapsed="1.022880"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[INFO] Invalid credentials error displayed: ${error_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.990509" elapsed="0.000409"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${INVALID_CREDENTIALS}</arg>
+<arg>msg=Expected '${INVALID_CREDENTIALS}' but got: ${error_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.991137" elapsed="0.000533"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>Incorrect Login</arg>
+<arg>msg=Expected 'Incorrect Login' but got: ${error_text}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.992150" elapsed="0.000382"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${error_text}</arg>
+<arg>Incorrect Login</arg>
+<arg>msg=Expected 'Incorrect Login' but got: ${error_text}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.991894" elapsed="0.000772"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-16T23:33:02.993098" level="INFO">[PASS] Negative test passed - Correct invalid credentials error: Incorrect Login</msg>
+<arg>[PASS] Negative test passed - Correct invalid credentials error: ${error_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.992869" elapsed="0.000317"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-16T23:33:02.993592" level="INFO">[FAIL] Negative test failed - Invalid credentials error mismatch: Incorrect Login</msg>
+<arg>[FAIL] Negative test failed - Invalid credentials error mismatch: ${error_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.993372" elapsed="0.000305"/>
+</kw>
+<doc>Validate error when login fails with invalid username or password.</doc>
+<status status="PASS" start="2025-09-16T23:33:00.931319" elapsed="2.062478"/>
+</kw>
+<arg>Validate Invalid Credentials Error</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-09-16T23:33:00.930858" elapsed="2.063034"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n[PASS] Invalid username error validation displayed.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.994057" elapsed="0.000279"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-09-16T23:33:02.994753" level="FAIL">Negative test executed successfully, marking as FAIL intentionally</msg>
+<arg>Negative test executed successfully, marking as FAIL intentionally</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-09-16T23:33:02.994512" elapsed="0.000353">Negative test executed successfully, marking as FAIL intentionally</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-16T23:33:02.995179" elapsed="2.575421"/>
+</kw>
+<doc>Verify error when login is attempted with invalid username.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-09-16T23:32:48.742100" elapsed="16.828661">Negative test executed successfully, marking as FAIL intentionally</status>
+</test>
+<test id="s1-t7" name="TC7 Verify Login With Invalid Password" line="69">
+<kw name="Launch Application" owner="Login_LogoutKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-16T23:33:05.572882" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<msg time="2025-09-16T23:36:33.043345" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-16T23:36:33.043638" level="FAIL">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=62856): Read timed out. (read timeout=120)</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-09-16T23:33:05.572519" elapsed="207.499969">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=62856): Read timed out. (read timeout=120)</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-09-16T23:36:33.072703" elapsed="0.000041"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-09-16T23:36:33.072838" elapsed="0.000027"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2025-09-16T23:36:33.072939" elapsed="0.000022"/>
+</kw>
+<status status="FAIL" start="2025-09-16T23:33:05.571970" elapsed="207.501104">ReadTimeoutError: HTTPConnectionPool(host='localhost', port=62856): Read timed out. (read timeout=120)</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-16T23:36:33.073286" elapsed="2.594222"/>
+</kw>
+<doc>Verify error when login is attempted with invalid password.</doc>
+<tag>negative</tag>
+<tag>validation</tag>
+<status status="FAIL" start="2025-09-16T23:33:05.571288" elapsed="210.096400">Setup failed:
+ReadTimeoutError: HTTPConnectionPool(host='localhost', port=62856): Read timed out. (read timeout=120)</status>
+</test>
+<status status="FAIL" start="2025-09-16T23:29:44.731199" elapsed="410.937530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">logout</stat>
+<stat pass="0" fail="5" skip="0">negative</stat>
+<stat pass="2" fail="0" skip="0">positive</stat>
+<stat pass="0" fail="5" skip="0">validation</stat>
+</tag>
+<suite>
+<stat name="Login LogoutTests" id="s1" pass="2" fail="5" skip="0">Login LogoutTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-09-16T23:29:44.753296" level="ERROR">Error in file 'C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\Login_LogoutModule\Login_LogoutTests.robot' on line 2: Importing library 'Selenium Library' failed: ModuleNotFoundError: No module named 'Selenium Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\.venv\Scripts\robot.exe
+  C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\.venv\Scripts\python313.zip
+  C:\Users\Chaithra\AppData\Local\Programs\Python\Python313\DLLs
+  C:\Users\Chaithra\AppData\Local\Programs\Python\Python313\Lib
+  C:\Users\Chaithra\AppData\Local\Programs\Python\Python313
+  C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\.venv
+  C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\.venv\Lib\site-packages</msg>
+</errors>
+</robot>

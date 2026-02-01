@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2026-01-30T23:27:10.560837" rpa="false" schemaversion="5">
+<suite id="s1" name="SteadyOilApplicationProject" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject">
+<suite id="s1-s1" name="Tests" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests">
+<suite id="s1-s1-s1" name="OilTicket" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\OilTicket">
+<suite id="s1-s1-s1-s1" name="OilTicket" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\OilTicket\OilTicket.robot">
+<test id="s1-s1-s1-s1-t1" name="TC01 Create Rig Oil Ticket" line="11">
+<kw name="Create Rig Oil Ticket">
+<kw name="Launch Application" owner="Login_LogoutKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:11.099966" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-30T23:27:11.099533" elapsed="5.593494"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-30T23:27:16.693465" elapsed="0.036746"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-01-30T23:27:16.730595" elapsed="0.000480"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-01-30T23:27:16.731349" elapsed="0.502615"/>
+</kw>
+<status status="PASS" start="2026-01-30T23:27:11.098346" elapsed="6.135943"/>
+</kw>
+<kw name="Login To Application" owner="Login_LogoutKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:17.235594" elapsed="1.058543"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:18.295436" level="INFO">Typing text 'admin@steadyoil.com' into text field 'id=identity'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:18.294626" elapsed="1.713243"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:20.009047" level="INFO">Typing text 'Pwd4so!l' into text field 'id=userpass'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:20.008376" elapsed="1.685804"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:21.694994" level="INFO">Clicking button 'xpath=//button[normalize-space(text())="Login"]'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:21.694560" elapsed="8.123428"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-30T23:27:29.818404" elapsed="0.537947"/>
+</kw>
+<status status="PASS" start="2026-01-30T23:27:17.234765" elapsed="13.121850"/>
+</kw>
+<kw name="Navigate to Oil Ticket Page" owner="OilTicketResources">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:30.357763" level="INFO">Simulating Mouse Over on element '//nav[@id="main-sidebar"]/section/ul/li[6]/a/i/span'.</msg>
+<arg>//nav[@id="main-sidebar"]/section/ul/li[6]/a/i/span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:30.357432" elapsed="1.316021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//nav[@id="main-sidebar"]/section/ul/li[6]/ul/li[2]/a</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:31.673842" elapsed="1.038362"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:32.713402" level="INFO">Clicking element '//nav[@id="main-sidebar"]/section/ul/li[6]/ul/li[6]/a'.</msg>
+<arg>//nav[@id="main-sidebar"]/section/ul/li[6]/ul/li[6]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:32.712701" elapsed="2.725668"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Create Manual Fuel Ticket</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-30T23:27:35.438889" elapsed="0.531145"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Navigated to Create Manual Fuel Ticket Page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:27:35.970434" elapsed="0.000618"/>
+</kw>
+<doc>Navigate to the Create Manual Fuel Ticket page from sidebar</doc>
+<status status="PASS" start="2026-01-30T23:27:30.356969" elapsed="5.614275"/>
+</kw>
+<kw name="Select Customer" owner="OilTicketResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:35.972520" level="INFO">Clicking element 'xpath=//span[@id='select2-oil_customer_name-container']'.</msg>
+<arg>xpath=//span[@id='select2-oil_customer_name-container']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:35.972224" elapsed="1.459772"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:37.432865" level="INFO">Typing text 'Lund Brady' into text field 'xpath=//input[contains(@class, 'select2-search__field')]'.</msg>
+<arg>xpath=//input[contains(@class, 'select2-search__field')]</arg>
+<arg>${customer_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:37.432376" elapsed="2.101790"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:39.535324" level="INFO">Clicking element 'xpath=//li[contains(text(), "Lund Brady")]'.</msg>
+<arg>xpath=//li[contains(text(), "${customer_name}")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:39.534652" elapsed="1.190531"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T23:27:41.726703" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T23:27:40.725574" elapsed="1.001483"/>
+</kw>
+<arg>${customer}</arg>
+<status status="PASS" start="2026-01-30T23:27:35.971674" elapsed="5.755647"/>
+</kw>
+<kw name="Select Rig Name" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:rig_name</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:41.728554" elapsed="1.036361"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:42.765789" level="INFO">Typing text 'NABORS X8' into text field 'id:rig_name'.</msg>
+<arg>id:rig_name</arg>
+<arg>${rig_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:42.765324" elapsed="1.781119"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@id,'autocomplete') and normalize-space()='${rig_name}']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:44.547518" elapsed="1.044132"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:45.592898" level="INFO">Clicking element 'xpath=//div[contains(@id,'autocomplete') and normalize-space()='NABORS X8']'.</msg>
+<arg>xpath=//div[contains(@id,'autocomplete') and normalize-space()='${rig_name}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:45.592407" elapsed="1.166827"/>
+</kw>
+<arg>${rig_name}</arg>
+<status status="PASS" start="2026-01-30T23:27:41.727782" elapsed="5.032035"/>
+</kw>
+<kw name="Select Tank" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tank_name_data</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:46.761671" elapsed="1.040850"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:47.804033" level="INFO">Selecting options from selection list 'id=tank_name_data' by label Brady's Hanger.</msg>
+<arg>id=tank_name_data</arg>
+<arg>${tank_name}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-01-30T23:27:47.803225" elapsed="5.749213"/>
+</kw>
+<arg>${tank_name}</arg>
+<doc>Select any tank from dropdown using visible text</doc>
+<status status="PASS" start="2026-01-30T23:27:46.760579" elapsed="6.792166"/>
+</kw>
+<kw name="Enter Other Details Inputs" owner="OilTicketResources">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-01-30T23:27:53.554395" level="INFO">&amp;{ticket_data} = { purchase_order=July07 | caller_information=Roman5563 | site_name=WatfordCity | fees_admin_oil=15 | oil_ticket_notes=50 gallons }</msg>
+<var>&amp;{ticket_data}</var>
+<arg>purchase_order=July07</arg>
+<arg>caller_information=Roman5563</arg>
+<arg>site_name=WatfordCity</arg>
+<arg>fees_admin_oil=15</arg>
+<arg>oil_ticket_notes=50 gallons</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-01-30T23:27:53.553726" elapsed="0.000736"/>
+</kw>
+<kw name="Enter Other Ticket Details" owner="OilTicketResources">
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:53.556821" elapsed="1.040198"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:54.597975" level="INFO">Typing text 'July07' into text field 'purchase_order'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:54.597446" elapsed="1.701754"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Entered ${value} into ${locator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:27:56.299583" elapsed="0.000856"/>
+</kw>
+<var name="${locator}">purchase_order</var>
+<var name="${value}">July07</var>
+<status status="PASS" start="2026-01-30T23:27:53.556583" elapsed="2.743997"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:56.301154" elapsed="1.040564"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:27:57.342557" level="INFO">Typing text 'Roman5563' into text field 'caller_information'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:27:57.342102" elapsed="1.686341"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Entered ${value} into ${locator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:27:59.029152" elapsed="0.001334"/>
+</kw>
+<var name="${locator}">caller_information</var>
+<var name="${value}">Roman5563</var>
+<status status="PASS" start="2026-01-30T23:27:56.300949" elapsed="2.730138"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:27:59.032673" elapsed="1.037936"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:00.071929" level="INFO">Typing text 'WatfordCity' into text field 'site_name'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:00.071277" elapsed="1.727908"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Entered ${value} into ${locator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:01.799904" elapsed="0.000764"/>
+</kw>
+<var name="${locator}">site_name</var>
+<var name="${value}">WatfordCity</var>
+<status status="PASS" start="2026-01-30T23:27:59.032187" elapsed="2.768703"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:01.801564" elapsed="1.050233"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:02.852899" level="INFO">Typing text '15' into text field 'fees_admin_oil'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:02.852299" elapsed="1.690070"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Entered ${value} into ${locator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:04.542772" elapsed="0.000879"/>
+</kw>
+<var name="${locator}">fees_admin_oil</var>
+<var name="${value}">15</var>
+<status status="PASS" start="2026-01-30T23:28:01.801274" elapsed="2.742515"/>
+</iter>
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:04.544305" elapsed="1.044022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:05.589157" level="INFO">Typing text '50 gallons' into text field 'oil_ticket_notes'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:05.588699" elapsed="1.656873"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Entered ${value} into ${locator}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:07.245992" elapsed="0.001100"/>
+</kw>
+<var name="${locator}">oil_ticket_notes</var>
+<var name="${value}">50 gallons</var>
+<status status="PASS" start="2026-01-30T23:28:04.544092" elapsed="2.703310"/>
+</iter>
+<var>${locator}</var>
+<var>${value}</var>
+<value>&amp;{ticket_data}</value>
+<status status="PASS" start="2026-01-30T23:27:53.555308" elapsed="13.692279"/>
+</for>
+<arg>&amp;{ticket_data}</arg>
+<doc>Enter oil ticket input fields dynamically</doc>
+<status status="PASS" start="2026-01-30T23:27:53.554828" elapsed="13.693042"/>
+</kw>
+<status status="PASS" start="2026-01-30T23:27:53.553144" elapsed="13.694902"/>
+</kw>
+<kw name="Scroll To Element" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:07.249373" elapsed="1.044124"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-30T23:28:08.294125" elapsed="1.333422"/>
+</kw>
+<arg>id:oil_reset</arg>
+<doc>Scroll any element into view dynamically</doc>
+<status status="PASS" start="2026-01-30T23:28:07.248582" elapsed="2.379287"/>
+</kw>
+<kw name="Scroll And Click Element" owner="OilTicketResources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-30T23:28:09.628863" elapsed="0.523551"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-30T23:28:10.152851" elapsed="1.306487"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-01-30T23:28:11.459789" elapsed="1.552082"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:13.012749" level="INFO">Clicking element 'xpath=//input[contains(@class,'add_oil_prod_button')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:13.012276" elapsed="1.169399"/>
+</kw>
+<arg>xpath=//input[contains(@class,'add_oil_prod_button')]</arg>
+<doc>Scroll to element and click safely</doc>
+<status status="PASS" start="2026-01-30T23:28:09.628302" elapsed="4.553670"/>
+</kw>
+<kw name="Go To Product Pagination Page" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id='pagination_product_list_buttons']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:14.183182" elapsed="1.039438"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:15.223470" level="INFO">Clicking element 'xpath=//div[@id='pagination_product_list_buttons']//button[normalize-space()='2']'.</msg>
+<arg>xpath=//div[@id='pagination_product_list_buttons']//button[normalize-space()='${page_number}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:15.222995" elapsed="1.155125"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//tbody[@id='product_table_list_body']/tr</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:16.378505" elapsed="1.070018"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Navigated to product page ${page_number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:17.448990" elapsed="0.000893"/>
+</kw>
+<arg>2</arg>
+<doc>Navigate to a specific product pagination page</doc>
+<status status="PASS" start="2026-01-30T23:28:14.182424" elapsed="3.267717"/>
+</kw>
+<kw name="Verify Product Pagination Page Active" owner="OilTicketResources">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:18.527023" level="INFO">${class} = btn btn-default pagination-button active</msg>
+<var>${class}</var>
+<arg>xpath=//button[normalize-space()='${page_number}']</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:17.451112" elapsed="1.076015"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${class}</arg>
+<arg>active</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-01-30T23:28:18.527441" elapsed="0.000322"/>
+</kw>
+<arg>2</arg>
+<status status="PASS" start="2026-01-30T23:28:17.450528" elapsed="1.077367"/>
+</kw>
+<kw name="Select Product From Current Page By Index" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//tbody[@id='product_table_list_body']/tr[${product_index}]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:18.528614" elapsed="1.037951"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//tbody[@id='product_table_list_body']/tr[${product_index}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-30T23:28:19.567069" elapsed="1.306084"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:20.874010" level="INFO">Clicking element 'xpath=//tbody[@id='product_table_list_body']/tr[1]//button[contains(@class,'add-row-main')]'.</msg>
+<arg>xpath=//tbody[@id='product_table_list_body']/tr[${product_index}]//button[contains(@class,'add-row-main')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:20.873534" elapsed="1.174889"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Selected product index ${product_index}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:22.048935" elapsed="0.000791"/>
+</kw>
+<arg>1</arg>
+<doc>Select product from current page using index</doc>
+<status status="PASS" start="2026-01-30T23:28:18.528173" elapsed="3.521848"/>
+</kw>
+<kw name="Click Save Added Product Button" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class,'save_added_pro_in_sess')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:22.051017" elapsed="1.041062"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class,'save_added_pro_in_sess')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-01-30T23:28:23.092467" elapsed="1.544431"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:24.637638" level="INFO">Clicking element 'xpath=//button[contains(@class,'save_added_pro_in_sess')]'.</msg>
+<arg>xpath=//button[contains(@class,'save_added_pro_in_sess')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:24.637272" elapsed="1.129852"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Clicked Save Added Product button</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:25.767646" elapsed="0.000774"/>
+</kw>
+<doc>Click Save button in Add Product modal</doc>
+<status status="PASS" start="2026-01-30T23:28:22.050479" elapsed="3.718150"/>
+</kw>
+<kw name="Verify Product Modal Closed" owner="OilTicketResources">
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class,'save_added_pro_in_sess')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:25.769448" elapsed="1.053497"/>
+</kw>
+<status status="PASS" start="2026-01-30T23:28:25.768983" elapsed="1.054275"/>
+</kw>
+<kw name="Log Added Oil Products" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//tbody[contains(@class,'oil_ticket_data_list')]/tr</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:26.824299" elapsed="1.041065"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:28.383023" level="INFO">${rows} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="1591712c011378c971157540289f647b", element="f.866ED3FCF9CED1C0860E2DF1D869FE39.d.948A11EE775FC4EF3D729E8260E357AF.e.25384")&gt;]</msg>
+<var>${rows}</var>
+<arg>xpath=//tbody[contains(@class,'oil_ticket_data_list')]/tr</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:27.865729" elapsed="0.517546"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-01-30T23:28:28.384133" level="INFO">Length is 1.</msg>
+<msg time="2026-01-30T23:28:28.384438" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${rows}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-01-30T23:28:28.383608" elapsed="0.000908"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<arg>No oil products found in added product list</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-01-30T23:28:28.384774" elapsed="0.000464"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-30T23:28:28.385639" level="INFO">====== Added Oil Products ======</msg>
+<arg>====== Added Oil Products ======</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-30T23:28:28.385457" elapsed="0.000259"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>====== Added Oil Products ======</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:28.385898" elapsed="0.000623"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:29.437683" level="INFO">${id} = 939</msg>
+<var>${id}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:28.388210" elapsed="1.049580"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:30.475489" level="INFO">${qty} = 1</msg>
+<var>${qty}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:29.438119" elapsed="1.037477"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:31.512594" level="INFO">${product} = Endurance Full Synthetic Dexos 0W20</msg>
+<var>${product}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:30.475930" elapsed="1.036798"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:32.563135" level="INFO">${size} = 1.0000</msg>
+<var>${size}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:31.513171" elapsed="1.050063"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:33.600971" level="INFO">${uom} = Gallons</msg>
+<var>${uom}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[5]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:32.563554" elapsed="1.037543"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:34.641779" level="INFO">${package} = Meter</msg>
+<var>${package}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[6]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:33.601511" elapsed="1.040510"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:35.710418" level="INFO">${retail} = $12.9100</msg>
+<var>${retail}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[7]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:34.642786" elapsed="1.067735"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:36.748898" level="INFO">${cost} = $17.4000</msg>
+<var>${cost}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[8]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:35.710827" elapsed="1.038169"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:37.808281" level="INFO">${discount} = 0.00/G</msg>
+<var>${discount}</var>
+<arg>xpath=(//tbody[contains(@class,'oil_ticket_data_list')]/tr)[${index}]/td[9]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:36.749313" elapsed="1.059067"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-30T23:28:37.809256" level="INFO">${line} = ID:939 | Qty:1 | Product:Endurance Full Synthetic Dexos 0W20 | Size:1.0000 | UOM:Gallons | Package:Meter | Retail:$12.9100 | Cost:$17.4000 | Discount:0.00/G</msg>
+<var>${line}</var>
+<arg>ID:${id} | Qty:${qty} | Product:${product} | Size:${size} | UOM:${uom} | Package:${package} | Retail:${retail} | Cost:${cost} | Discount:${discount}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-30T23:28:37.808695" elapsed="0.000614"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-30T23:28:37.809747" level="INFO">ID:939 | Qty:1 | Product:Endurance Full Synthetic Dexos 0W20 | Size:1.0000 | UOM:Gallons | Package:Meter | Retail:$12.9100 | Cost:$17.4000 | Discount:0.00/G</msg>
+<arg>${line}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-30T23:28:37.809522" elapsed="0.000303"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${line}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:37.810029" elapsed="0.000561"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2026-01-30T23:28:28.387999" elapsed="9.422762"/>
+</iter>
+<var>${index}</var>
+<value>1</value>
+<value>${count + 1}</value>
+<status status="PASS" start="2026-01-30T23:28:28.386746" elapsed="9.424179"/>
+</for>
+<doc>Logs all added oil products from ticket table to console and report</doc>
+<status status="PASS" start="2026-01-30T23:28:26.823824" elapsed="10.987357"/>
+</kw>
+<kw name="Click Create Oil Ticket Button" owner="OilTicketResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=oil_save</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T23:28:37.812051" elapsed="1.054930"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=oil_save</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-01-30T23:28:38.867426" elapsed="1.544204"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=oil_save</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-01-30T23:28:40.412182" elapsed="1.289344"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-30T23:28:41.702489" level="INFO">Clicking element 'id=oil_save'.</msg>
+<arg>id=oil_save</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T23:28:41.701986" elapsed="15.054324"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Clicked Create Ticket button</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-30T23:28:56.756779" elapsed="0.000819"/>
+</kw>
+<doc>Click Create Ticket button to submit oil ticket</doc>
+<status status="PASS" start="2026-01-30T23:28:37.811601" elapsed="18.946201"/>
+</kw>
+<arg>Lund Brady</arg>
+<arg>NABORS X8</arg>
+<arg>Brady's Hanger</arg>
+<doc>This test case is to create a Rig Oil Ticket</doc>
+<status status="PASS" start="2026-01-30T23:27:11.097584" elapsed="105.660606"/>
+</kw>
+<doc>Create rig oil ticket and verify successful submission</doc>
+<tag>RigOilTicket</tag>
+<status status="PASS" start="2026-01-30T23:27:11.096021" elapsed="105.663053"/>
+</test>
+<status status="PASS" start="2026-01-30T23:27:10.622122" elapsed="106.139344"/>
+</suite>
+<status status="PASS" start="2026-01-30T23:27:10.618229" elapsed="106.145518"/>
+</suite>
+<status status="PASS" start="2026-01-30T23:27:10.615041" elapsed="106.155268"/>
+</suite>
+<status status="PASS" start="2026-01-30T23:27:10.563295" elapsed="106.209280"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">RigOilTicket</stat>
+</tag>
+<suite>
+<stat name="SteadyOilApplicationProject" id="s1" pass="1" fail="0" skip="0">SteadyOilApplicationProject</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">SteadyOilApplicationProject.Tests</stat>
+<stat name="OilTicket" id="s1-s1-s1" pass="1" fail="0" skip="0">SteadyOilApplicationProject.Tests.OilTicket</stat>
+<stat name="OilTicket" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">SteadyOilApplicationProject.Tests.OilTicket.OilTicket</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.2 on win32)" generated="2025-07-11T15:06:31.052391" rpa="false" schemaversion="5">
+<suite id="s1" name="NormalTicket" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\OilReservationTicket\NormalTicket.robot">
+<test id="s1-t1" name="Normal Oil Reservation Ticket" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:06:31.511986" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-11T15:06:31.511474" elapsed="4.897543"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-11T15:06:36.409551" elapsed="0.042284"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-11T15:06:36.452136" elapsed="0.000401"/>
+</kw>
+<kw name="Login To Application">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:06:36.453924" level="INFO">Typing text 'admin@steadyoil.com' into text field 'name:identity'.</msg>
+<arg>name:identity</arg>
+<arg>admin@steadyoil.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:06:36.453467" elapsed="9.204591"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:06:45.658732" level="INFO">Typing text 'Pwd4so!l' into text field 'name:password'.</msg>
+<arg>name:password</arg>
+<arg>Pwd4so!l</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:06:45.658389" elapsed="9.159846"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:06:54.819367" level="INFO">Clicking button 'xpath://button[@class="login100-form-btn"]'.</msg>
+<arg>xpath://button[@class="login100-form-btn"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:06:54.818797" elapsed="15.195828"/>
+</kw>
+<status status="PASS" start="2025-07-11T15:06:36.452963" elapsed="33.561927"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>3s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-11T15:07:10.015135" elapsed="6.590661"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:07:16.606502" level="INFO">Simulating Mouse Over on element 'xpath://nav[@id="main-sidebar"]//ul//li[6]//a//i//span'.</msg>
+<arg>xpath://nav[@id="main-sidebar"]//ul//li[6]//a//i//span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:07:16.606142" elapsed="6.321425"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:07:22.928582" level="INFO">Clicking element 'xpath://ul[@class="sidebar-menu"]//li[6]//li[9]//a'.</msg>
+<arg>xpath://ul[@class="sidebar-menu"]//li[6]//li[9]//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:07:22.928078" elapsed="8.059177"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:07:30.988077" level="INFO">Clicking element 'xpath://span[@id="select2-oil_customer_name-container"]'.</msg>
+<arg>xpath://span[@id="select2-oil_customer_name-container"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:07:30.987668" elapsed="6.363207"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:07:37.351738" level="INFO">Typing text 'Lund Brady' into text field 'xpath://input[@class="select2-search__field"]'.</msg>
+<arg>xpath://input[@class="select2-search__field"]</arg>
+<arg>Lund Brady</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:07:37.351326" elapsed="9.355948"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:07:46.708305" level="INFO">Clicking element 'xpath://ul[@class="select2-results__options"]//li[contains(text(), "Lund Brady")]'.</msg>
+<arg>xpath://ul[@class="select2-results__options"]//li[contains(text(), "Lund Brady")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:07:46.707795" elapsed="6.209992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:07:52.919130" level="INFO">Typing text 'N' into text field 'name:rig_name'.</msg>
+<arg>name:rig_name</arg>
+<arg>N</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:07:52.918533" elapsed="9.224951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:08:02.144256" level="INFO">Clicking element 'id:NABORS X28'.</msg>
+<arg>id:NABORS X28</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:08:02.143883" elapsed="6.157903"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:08:08.302583" level="INFO">Selecting options from selection list 'id:tank_name_data' by value 2551.</msg>
+<arg>id:tank_name_data</arg>
+<arg>2551</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-11T15:08:08.302176" elapsed="24.231176"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:08:32.534300" level="INFO">Typing text '554785' into text field 'name:purchase_order'.</msg>
+<arg>name:purchase_order</arg>
+<arg>554785</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:08:32.533806" elapsed="9.176808"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:08:41.711588" level="INFO">Typing text '441526' into text field 'name:caller_info'.</msg>
+<arg>name:caller_info</arg>
+<arg>441526</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:08:41.711141" elapsed="9.187022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:08:50.899041" level="INFO">Typing text 'Watford City' into text field 'name:site_name'.</msg>
+<arg>name:site_name</arg>
+<arg>Watford City</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:08:50.898574" elapsed="9.207758"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:09:00.107105" level="INFO">Typing text '40' into text field 'name:fees_admin_oil'.</msg>
+<arg>name:fees_admin_oil</arg>
+<arg>40</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:09:00.106736" elapsed="9.187935"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:09:09.295751" level="INFO">Typing text 'metered products' into text field 'id:oil_ticket_notes'.</msg>
+<arg>id:oil_ticket_notes</arg>
+<arg>metered products</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:09:09.295166" elapsed="9.176674"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:oil_reset</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-07-11T15:09:18.472210" elapsed="6.317406"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:09:24.790564" level="INFO">Clicking element 'xpath://input[@class=" button button--success add_oil_prod_button"]'.</msg>
+<arg>xpath://input[@class=" button button--success add_oil_prod_button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:09:24.790057" elapsed="6.184586"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:09:30.975373" level="INFO">Clicking button 'xpath://div[@id="pagination_product_list_buttons"]//button[3]'.</msg>
+<arg>xpath://div[@id="pagination_product_list_buttons"]//button[3]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:09:30.975004" elapsed="15.212176"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:09:46.187944" level="INFO">Clicking button 'xpath://tbody[@id="product_table_list_body"]//tr[3]//button'.</msg>
+<arg>xpath://tbody[@id="product_table_list_body"]//tr[3]//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:09:46.187562" elapsed="15.214682"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:10:01.402966" level="INFO">Clicking button '//button[@class="btn btn-success save_added_pro_in_sess mx-2"]'.</msg>
+<arg>//button[@class="btn btn-success save_added_pro_in_sess mx-2"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:10:01.402602" elapsed="15.202170"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:oil_reset</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-07-11T15:10:16.605146" elapsed="6.303415"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:10:22.909316" level="INFO">Clicking button 'id:oil_save'.</msg>
+<arg>id:oil_save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-11T15:10:22.908944" elapsed="36.082024"/>
+</kw>
+<status status="PASS" start="2025-07-11T15:06:31.510090" elapsed="267.481337"/>
+</test>
+<status status="PASS" start="2025-07-11T15:06:31.054737" elapsed="267.937551"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="NormalTicket" id="s1" pass="1" fail="0" skip="0">NormalTicket</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,32 @@
+1️⃣ Command to run the FULL .robot file:
+    python scripts\run_with_reports.py "C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\Login_LogoutModule\Login_LogoutTests.robot"
+
+2️⃣ Command to run a SINGLE test case:
+    python scripts\run_with_reports.py "C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\Login_LogoutModule\Login_LogoutTests.robot" "Login With Valid Credentials"
+🔹 Replace Login With Valid Credentials with the exact test case name.
+
+📍 Important: where to execute this command:
+You must be in this directory:
+    C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject
+If not, first run:
+    cd C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject
+📍 Important: You must be in the directory where the robot file is located.
+
+| Run Type    | Command Arguments                    |
+| ----------- | ------------------------------------ |
+| Full file   | script + robot file                  |
+| Single test | script + robot file + test case name |
+
+🟢 Quick sanity check:
+If everything is correct, you will see:
+🚀 Running: robot --outputdir=...
+PASS ...
+FAIL ...
+📊 Test Metrics → ...
+📑 Metrics logged in ...
+📤 Reports uploaded to OneDrive ...
+And in PyCharm:
+reports/
+ └── Login_LogoutModule/
+     └── Login_LogoutTests/
+         └── <timestamp>/

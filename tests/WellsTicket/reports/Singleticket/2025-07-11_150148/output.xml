@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.2 on win32)" generated="2025-07-11T15:21:07.214957" rpa="false" schemaversion="5">
+<suite id="s1" name="Singleticket" source="C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\WellsTicket\Singleticket.robot">
+<test id="s1-t1" name="Wells Single Ticket" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-11T15:21:07.553307" level="INFO">Opening browser 'chrome' to base url 'https://stage.steadyoil.com/'.</msg>
+<msg time="2025-07-11T15:21:09.412113" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-11T15:21:09.412418" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.122)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6df89cda5+78885]
+	GetHandleVerifier [0x0x7ff6df89ce00+78976]
+	(No symbol) [0x0x7ff6df659bca]
+	(No symbol) [0x0x7ff6df6565e2]
+	(No symbol) [0x0x7ff6df647319]
+	(No symbol) [0x0x7ff6df6490c1]
+	(No symbol) [0x0x7ff6df647636]
+	(No symbol) [0x0x7ff6df647096]
+	(No symbol) [0x0x7ff6df646d5a]
+	(No symbol) [0x0x7ff6df64492f]
+	(No symbol) [0x0x7ff6df6451ac]
+	(No symbol) [0x0x7ff6df65db7a]
+	(No symbol) [0x0x7ff6df70201e]
+	(No symbol) [0x0x7ff6df6d8b8a]
+	(No symbol) [0x0x7ff6df70122f]
+	(No symbol) [0x0x7ff6df6d8963]
+	(No symbol) [0x0x7ff6df6a16b1]
+	(No symbol) [0x0x7ff6df6a2443]
+	GetHandleVerifier [0x0x7ff6dfb74eed+3061101]
+	GetHandleVerifier [0x0x7ff6dfb6f33d+3037629]
+	GetHandleVerifier [0x0x7ff6dfb8e592+3165202]
+	GetHandleVerifier [0x0x7ff6df8b730e+186766]
+	GetHandleVerifier [0x0x7ff6df8beb3f+217535]
+	GetHandleVerifier [0x0x7ff6df8a59b4+114740]
+	GetHandleVerifier [0x0x7ff6df8a5b69+115177]
+	GetHandleVerifier [0x0x7ff6df88c368+10728]
+	BaseThreadInitThunk [0x0x7ffbd9a7e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdb49c34c+44]
+</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-07-11T15:21:07.552986" elapsed="1.865247">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.122)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6df89cda5+78885]
+	GetHandleVerifier [0x0x7ff6df89ce00+78976]
+	(No symbol) [0x0x7ff6df659bca]
+	(No symbol) [0x0x7ff6df6565e2]
+	(No symbol) [0x0x7ff6df647319]
+	(No symbol) [0x0x7ff6df6490c1]
+	(No symbol) [0x0x7ff6df647636]
+	(No symbol) [0x0x7ff6df647096]
+	(No symbol) [0x0x7ff6df646d5a]
+	(No symbol) [0x0x7ff6df64492f]
+	(No symbol) [0x0x7ff6df6451ac]
+	(No symbol) [0x0x7ff6df65db7a]
+	(No symbol) [0x0x7ff6df70201e]
+	(No symbol) [0x0x7ff6df6d8b8a]
+	(No symbol) [0x0x7ff6df70122f]
+	(No symbol) [0x0x7ff6df6d8963]
+	(No symbol) [0x0x7ff6df6a16b1]
+	(No symbol) [0x0x7ff6df6a2443]
+	GetHandleVerifier [0x0x7ff6dfb74eed+3061101]
+	GetHandleVerifier [0x0x7ff6dfb6f33d+3037629]
+	GetHandleVerifier [0x0x7ff6dfb8e592+3165202]
+	GetHandleVerifier [0x0x7ff6df8b730e+186766]
+	GetHandleVerifier [0x0x7ff6df8beb3f+217535]
+	GetHandleVerifier [0x0x7ff6df8a59b4+114740]
+	GetHandleVerifier [0x0x7ff6df8a5b69+115177]
+	GetHandleVerifier [0x0x7ff6df88c368+10728]
+	BaseThreadInitThunk [0x0x7ffbd9a7e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdb49c34c+44]
+</status>
+</kw>
+<kw name="Login To Application">
+<status status="NOT RUN" start="2025-07-11T15:21:09.418732" elapsed="0.000081"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.418997" elapsed="0.000043"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.419173" elapsed="0.000037"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.419328" elapsed="0.000041"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<arg>//nav[@class="main-sidebar"]//section//ul//li[6]//a//i//span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.419481" elapsed="0.000030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//nav[@class="main-sidebar"]//section//ul//li[6]//ul//li[4]//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.419689" elapsed="0.000159"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//span[@id="select2-wells_client_name-container"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.420523" elapsed="0.000091"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@class="select2-search__field"]</arg>
+<arg>Lund Brady</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.421565" elapsed="0.000175"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//span//ul//li[contains (text(), "Lund Brady")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.422101" elapsed="0.000052"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:search_text</arg>
+<arg>31</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.422289" elapsed="0.000037"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@id="31 OPERATING, LLC"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.422458" elapsed="0.000034"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:wells_name</arg>
+<arg>S</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.422610" elapsed="0.000032"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="14498"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.422756" elapsed="0.000031"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>0.3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.422903" elapsed="0.000034"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:site_name</arg>
+<arg>North A</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.423042" elapsed="0.000031"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:purchase_order</arg>
+<arg>852412</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.423368" elapsed="0.000077"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:caller_info</arg>
+<arg>Roman@Renzo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.423759" elapsed="0.000050"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:wells_ticket_notes</arg>
+<arg>150 gallons</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.424063" elapsed="0.000116"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id:well_add_list</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.424535" elapsed="0.000121"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id:fuel_types</arg>
+<arg>5</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.425019" elapsed="0.000161"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name:gallons</arg>
+<arg>150</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.425607" elapsed="0.000067"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:retail_cost_gallon_wells</arg>
+<arg>2.50</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.426086" elapsed="0.000167"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>id:discount</arg>
+<arg>3%</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.426613" elapsed="0.000058"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:fees_wells_manual</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.426833" elapsed="0.000043"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id:fuel_class_terminal_wells</arg>
+<arg>19</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.427198" elapsed="0.000069"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id:well_add_list</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.427437" elapsed="0.000036"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>class:box-body</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.427587" elapsed="0.000032"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id:wells_ticket_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-07-11T15:21:09.427719" elapsed="0.000030"/>
+</kw>
+<status status="FAIL" start="2025-07-11T15:21:07.552028" elapsed="1.875979">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=137.0.7151.122)
+Stacktrace:
+	GetHandleVerifier [0x0x7ff6df89cda5+78885]
+	GetHandleVerifier [0x0x7ff6df89ce00+78976]
+	(No symbol) [0x0x7ff6df659bca]
+	(No symbol) [0x0x7ff6df6565e2]
+	(No symbol) [0x0x7ff6df647319]
+	(No symbol) [0x0x7ff6df6490c1]
+	(No symbol) [0x0x7ff6df647636]
+	(No symbol) [0x0x7ff6df647096]
+	(No symbol) [0x0x7ff6df646d5a]
+	(No symbol) [0x0x7ff6df64492f]
+	(No symbol) [0x0x7ff6df6451ac]
+	(No symbol) [0x0x7ff6df65db7a]
+	(No symbol) [0x0x7ff6df70201e]
+	(No symbol) [0x0x7ff6df6d8b8a]
+	(No symbol) [0x0x7ff6df70122f]
+	(No symbol) [0x0x7ff6df6d8963]
+	(No symbol) [0x0x7ff6df6a16b1]
+	(No symbol) [0x0x7ff6df6a2443]
+	GetHandleVerifier [0x0x7ff6dfb74eed+3061101]
+	GetHandleVerifier [0x0x7ff6dfb6f33d+3037629]
+	GetHandleVerifier [0x0x7ff6dfb8e592+3165202]
+	GetHandleVerifier [0x0x7ff6df8b730e+186766]
+	GetHandleVerifier [0x0x7ff6df8beb3f+217535]
+	GetHandleVerifier [0x0x7ff6df8a59b4+114740]
+	GetHandleVerifier [0x0x7ff6df8a5b69+115177]
+	GetHandleVerifier [0x0x7ff6df88c368+10728]
+	BaseThreadInitThunk [0x0x7ffbd9a7e8d7+23]
+	RtlUserThreadStart [0x0x7ffbdb49c34c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-07-11T15:21:07.217200" elapsed="2.211370"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Singleticket" id="s1" pass="0" fail="1" skip="0">Singleticket</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
