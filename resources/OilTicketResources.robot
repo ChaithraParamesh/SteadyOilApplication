@@ -181,6 +181,14 @@ Verify Product Pagination Page Active
     ${class}=    Get Element Attribute    xpath=//button[normalize-space()='${page_number}']    class
     Should Contain    ${class}    active
 
+Make Product Favourite
+    [Arguments]    ${product_name}
+    Wait Until Element Is Visible
+    ...    xpath=//tr[td[normalize-space()='${product_name}']]//i[contains(@class,'make_favourite_star')]
+    Click Element
+    ...    xpath=//tr[td[normalize-space()='${product_name}']]//i[contains(@class,'make_favourite_star')]
+
+
 Click Save Added Product Button
     [Documentation]    Click Save button in Add Product modal
     Wait Until Element Is Visible

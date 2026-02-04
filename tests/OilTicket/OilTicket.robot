@@ -2,6 +2,8 @@
 Library     SeleniumLibrary
 Resource    resources/Login_LogoutKeywords.robot
 Resource    resources/OilTicketResources.robot
+Resource    resources/base.robot
+
 
 
 
@@ -26,6 +28,10 @@ TC03 Create Tank Oil Ticket
      [Tags]    TankOilTicket
      Create Tank Oil Ticket    Lund Brady    Brady Lund Shop
 
+TC04 Create oil ticket by adding product favourite list
+     [Documentation]    Create oil ticket by adding product favourite list
+     [Tags]    ProductFavouriteList
+     Adding Product To Favourite List    Lund Brady    Brady Lund Shop    MAR Full Synthetic 5W40 CK-4
 
 *** Keywords ***
 Create Rig Oil Ticket
@@ -94,5 +100,25 @@ Create Tank Oil Ticket
     Click Create Oil Ticket Button
 
 
-
+Adding product to favourite list
+    [Documentation]    This test case is to add a product to the favourite list
+    [Arguments]    ${customer}    ${tank_name}    ${product_name}
+    Launch Application
+    Login To Application
+    Navigate To Oil Ticket Page
+    Select Customer    ${customer}
+    Select Tank        ${tank_name}
+    Enter Other Details Inputs
+    Scroll To Element     id:oil_reset
+    Scroll And Click Element
+    ...    xpath=//input[contains(@class,'add_oil_prod_button')]
+    Go To Product Pagination Page    4
+    Select Product From Current Page By Index    2
+    Make Product Favourite    ${product_name}
+    Click Save Added Product Button
+    Verify Product Modal Closed
+    Log Added Oil Products
+    Click Create Oil Ticket Button
+    
+    
 
