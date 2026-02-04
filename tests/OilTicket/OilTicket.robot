@@ -1,20 +1,30 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library     SeleniumLibrary
 Resource    resources/Login_LogoutKeywords.robot
 Resource    resources/OilTicketResources.robot
-Resource    resources/CommonKeywords.robot
+
+
 
 
 
 
 *** Test Cases ***
 TC01 Create Rig Oil Ticket
-    [Documentation]    Create rig oil ticket and verify successful submission
+    [Documentation]    Create rig oil ticket
     [Tags]    RigOilTicket
     Create Rig Oil Ticket    Lund Brady    NABORS X8    Brady's Hanger
 
 
+TC02 Create Well Oil Ticket
+     [Documentation]    Create well oil ticket
+     [Tags]    WellOilTicket
+     Create Well Oil Ticket    Lund Brady    BURLINGTON RESOURCES OIL & GAS COMPANY LP    BADLAND 11-15TFH   Brady's Hanger
+    
 
+TC03 Create Tank Oil Ticket
+     [Documentation]    Create tank oil ticket
+     [Tags]    TankOilTicket
+     Create Tank Oil Ticket    Lund Brady    Brady Lund Shop
 
 
 *** Keywords ***
@@ -42,11 +52,46 @@ Create Rig Oil Ticket
     Click Create Oil Ticket Button
     
 
+Create Well Oil Ticket
+    [Documentation]    This test case is to create a Well Oil Ticket
+    [Arguments]    ${customer}    ${operator_name}     ${well_name}    ${tank_name}
+    Launch Application
+    Login to Application
+    Navigate To Oil Ticket Page
+    Select Customer    ${customer}
+    Select Operator Name    ${operator_name}
+    Select Well name    ${well_name}
+    Select Tank        ${tank_name}
+    Enter Other Details Inputs
+    Scroll To Element     id:oil_reset
+    Scroll And Click Element    
+    ...    xpath=//input[contains(@class,'add_oil_prod_button')]
+    Go To Product Pagination Page    4
+    Select Product From Current Page By Index    3
+    Click Save Added Product Button
+    Verify Product Modal Closed
+    Log Added Oil Products
+    Click Create Oil Ticket Button
 
 
-
-
-
+Create Tank Oil Ticket
+    [Documentation]    This test case is to create a Tank Oil Ticket
+    [Arguments]    ${customer}    ${tank_name}
+    Launch Application
+    Login To Application
+    Navigate To Oil Ticket Page
+    Select Customer    ${customer}
+    Select Tank        ${tank_name}
+    Enter Other Details Inputs
+    Scroll To Element     id:oil_reset
+    Scroll And Click Element
+    ...    xpath=//input[contains(@class,'add_oil_prod_button')]
+    Go To Product Pagination Page    5
+    Select Product From Current Page By Index    2
+    Click Save Added Product Button
+    Verify Product Modal Closed
+    Log Added Oil Products
+    Click Create Oil Ticket Button
 
 
 

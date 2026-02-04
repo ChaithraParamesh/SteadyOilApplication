@@ -2,7 +2,7 @@
 robotframework==7.0
 robotframework-seleniumlibrary==6.2.0
 
-# Data handling
+# Data handlingp
 openpyxl==3.1.2
 pandas==2.2.2
 robotframework-datadriver==1.8.0

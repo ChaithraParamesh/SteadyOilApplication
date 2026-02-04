@@ -1,8 +1,11 @@
 1️⃣ Command to run the FULL .robot file:
-    python scripts\run_with_reports.py "C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\Login_LogoutModule\Login_LogoutTests.robot"
+    python3 scripts/run_with_reports.py \
+    tests/Login_LogoutModule/Login_LogoutTests.robot
 
 2️⃣ Command to run a SINGLE test case:
-    python scripts\run_with_reports.py "C:\Users\Chaithra\PycharmProjects\SteadyOilApplicationProject\tests\Login_LogoutModule\Login_LogoutTests.robot" "Login With Valid Credentials"
+    python3 scripts/run_with_reports.py \
+    tests/Login_LogoutModule/Login_LogoutTests.robot \
+    "Login With Valid Credentials"
 🔹 Replace Login With Valid Credentials with the exact test case name.
 
 📍 Important: where to execute this command:
